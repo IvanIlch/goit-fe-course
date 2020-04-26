@@ -16,8 +16,9 @@ body {
 /* Navigation */
 .navig_item {
   list-style: none;
-  margin-top: 74px;
   margin-bottom: 0;
+  margin: 0;
+  padding: 0;
 }
 .navig_item li {
   display: inline-block;
@@ -36,6 +37,7 @@ body {
   width: 900px;
   margin: 0 auto;
   padding: 0;
+  margin-top: 74px;
 }
 /* main */
 .content_item {
@@ -60,9 +62,9 @@ body {
   text-transform: uppercase;
 }
 .content_item :nth-child(2n) {
-  margin: 0;
+  margin-right: 0;
 }
-.content_item li:nth-child(n + 5) {
+.content_item li:nth-last-child(-n + 2) {
   margin-bottom: 0;
 }
 /* button  */
