@@ -134,6 +134,7 @@ body {
 .item_img {
   width: 255px;
   height: 282px;
+  margin-bottom: -7px;
 }
 .products {
   margin: 0;
@@ -151,6 +152,10 @@ body {
 .products_item:nth-child(4n + 4) {
   margin-right: 0;
 }
+.products_item:nth-last-child(-n + 4) {
+  margin-bottom: 0;
+}
+
 .name {
   list-style: none;
   float: left;
@@ -176,12 +181,16 @@ body {
   width: 255px;
   height: 40px;
 }
-.products li:hover {
+.featured_products .products li:hover .panel {
   background: #1abc9c;
 }
-.price:hover {
+.featured_products .products li:hover .panel li.price {
   background: #7fd9c7;
 }
+.featured_products .products li:hover .products_item img {
+  transform: scale(1.2);
+}
+
 /* section2 */
 .newsh2 {
   font-family: "Roboto-Black";
@@ -222,6 +231,12 @@ body {
 .texth4 {
   font-family: "OpenSans-SemiBold";
   font-size: 18px;
+  line-height: 26px;
+  margin: 0;
+}
+.new_list p {
+  font-size: 14px;
+  line-height: 26px;
 }
 .texth4:after {
   content: "";
