@@ -181,14 +181,11 @@ body {
   width: 255px;
   height: 40px;
 }
-.featured_products .products li:hover .panel {
+.featured_products .products li:hover .name {
   background: #1abc9c;
 }
 .featured_products .products li:hover .panel li.price {
   background: #7fd9c7;
-}
-.featured_products .products li:hover .products_item img {
-  transform: scale(1.2);
 }
 
 /* section2 */
