@@ -277,6 +277,10 @@ body {
   padding: 0;
   border: none;
 }
+.img_icons {
+  width: 26px;
+  height: 22px;
+}
 .like:hover {
   background-color: #1abc9c;
   transition: 0.5s;
