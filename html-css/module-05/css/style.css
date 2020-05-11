@@ -122,14 +122,17 @@ body {
   color: white;
 }
 .multiple-items .slick-next {
+  margin: 0;
   right: 10%;
-  top: -6%;
+  top: 38%;
   transform: rotate(-90deg);
 }
 .multiple-items .slick-prev {
+  margin: 0;
   left: 10%;
-  top: -6%;
+  top: 38%;
   transform: rotate(90deg);
+  margin: 0;
 }
 
 /* M A I N  */
