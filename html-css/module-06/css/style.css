@@ -60,7 +60,7 @@ html {
 .navig_list_item::after {
   content: "";
   display: block;
-  width: 50px;
+  width: 100%;
   height: 3px;
   background-color: #f38181;
   position: relative;
