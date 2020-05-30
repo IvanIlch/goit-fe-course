@@ -1,0 +1,351 @@
+@font-face {
+  font-family: "Roboto-Light";
+  src: url("../fonts/Roboto-Light.woff2") format("woff2"),
+    url("../fonts/Roboto-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Montserrat Bold"), local("Montserrat-Bold"),
+    url("../fonts/montserrat-v14-latin-700.woff2") format("woff2"),
+    url("../fonts/montserrat-v14-latin-700.woff") format("woff");
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 320px;
+  margin: 0 auto;
+}
+.baner_img {
+  background-image: url(../img/baner_tel.jpg);
+  height: 540px;
+  padding-top: 18px;
+  margin: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* N A V  */
+.navig {
+  margin-bottom: 27px;
+}
+.navig_list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.navig_list li {
+  width: 94px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navig_list_item {
+  text-decoration: none;
+  font-family: "Montserrat";
+  font-size: 14px;
+  line-height: 17px;
+  color: white;
+}
+.navig_list li:active,
+.navig_list li:focus {
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 20px;
+  border-color: rgb(255, 255, 255);
+  width: 94px;
+  height: 40px;
+}
+.logo {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  margin-top: 113px;
+  font-family: "Montserrat";
+  font-size: 20px;
+  line-height: 24px;
+  color: white;
+}
+/* B A N E R  */
+.baner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.motto {
+  font-family: "Montserrat";
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 10px;
+}
+.about {
+  font-family: "Roboto-Light";
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  color: white;
+  width: 230px;
+  margin-bottom: 14px;
+}
+.find_partner {
+  width: 280px;
+  height: 40px;
+  border-color: rgb(255, 78, 80);
+  border-radius: 20px;
+  background-color: rgb(255, 78, 80);
+  color: white;
+  font-family: "Montserrat";
+  font-size: 14px;
+  line-height: 17px;
+}
+/* T E A M  */
+.partner {
+  margin-top: 63px;
+}
+.meet_partner {
+  font-family: "Montserrat";
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+}
+.team {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+.team_list {
+  text-align: center;
+  width: 234px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.team_list::before {
+  content: "";
+  display: block;
+  width: 37px;
+  height: 37px;
+  border-style: solid;
+  border-width: 4px;
+  border-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  position: absolute;
+  right: 55px;
+  top: 86px;
+}
+
+.team_list:nth-child(1)::before {
+  background-image: url(../img/icon1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgb(255, 78, 80);
+}
+.team_list:nth-child(2)::before {
+  background-image: url(../img/icon2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #ffa507;
+}
+.team_list:nth-child(3)::before {
+  background-image: url(../img/icon3.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #1cd7ad;
+}
+.team_list:nth-child(4)::before {
+  background-image: url(../img/icon4.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #4e73db;
+}
+.team_list:last-child {
+  margin-bottom: 0;
+}
+.foto {
+  margin: 0 0 18px 0px;
+}
+
+.name {
+  font-family: "Montserrat";
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  margin-bottom: 13px;
+}
+.interests {
+  font-family: "Roboto-Light";
+  font-size: 14px;
+  line-height: 17px;
+}
+.other_partner {
+  width: 278px;
+  height: 42px;
+  font-family: "Montserrat";
+  font-size: 14px;
+  line-height: 17px;
+  color: rgb(255, 78, 80);
+  border-color: rgb(255, 78, 80);
+  background-color: white;
+  border-radius: 20px;
+  margin: 0 auto;
+  position: relative;
+  left: 20px;
+  top: 26px;
+  margin-bottom: 57px;
+}
+/* M E D I A  */
+@media (min-width: 748px) {
+  .container {
+    width: 748px;
+  }
+  .baner_img {
+    background-image: url(../img/baner_tabl.png);
+    background-repeat: no-repeat;
+    height: 700px;
+    margin: 0 auto;
+  }
+  .navig {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-top: 17px;
+  }
+  .logo {
+    margin-top: 10px;
+    margin-left: 48px;
+  }
+  .navig_list {
+    margin-right: 18px;
+  }
+  .baner {
+    margin-top: 140px;
+  }
+  .motto {
+    width: 510px;
+    font-size: 52px;
+    line-height: 62px;
+    margin-bottom: 25px;
+  }
+  .about {
+    font-size: 24px;
+    line-height: 29px;
+    width: 400px;
+    margin-bottom: 33px;
+  }
+  .find_partner {
+    width: 222px;
+    margin-left: 24px;
+  }
+  .partner {
+    margin-top: 66px;
+  }
+  .team {
+    flex-direction: column;
+    height: 525px;
+    align-content: center;
+    justify-content: start;
+    margin-top: 30px;
+  }
+  .team_list {
+    width: 236px;
+    margin-bottom: 55px;
+  }
+  .team_list:nth-child(2n - 2) {
+    margin-bottom: 0;
+  }
+  .team_list:nth-child(-n + 2) {
+    margin-right: 20px;
+  }
+  .other_partner {
+    width: 191px;
+    height: 40px;
+    left: 287px;
+    top: 7px;
+  }
+}
+@media (min-width: 942px) {
+  .container {
+    width: 942px;
+  }
+  .baner {
+    margin-top: 105px;
+  }
+  .baner_descop {
+    background-image: url(../img/baner_desc.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    height: 700px;
+  }
+  .baner_img {
+    padding-top: 0;
+  }
+  .navig {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-top: 0px;
+    margin-right: 0;
+    height: 110px;
+    align-items: center;
+  }
+  .navig_list {
+    margin-right: 0px;
+  }
+  .logo {
+    margin-left: 0;
+  }
+  .find_partner {
+    margin-left: 0;
+  }
+  .meet_partner {
+    margin-bottom: 12px;
+  }
+  .team {
+    flex-direction: row;
+    margin-top: 0;
+    height: 300px;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: -6px;
+  }
+  .team_list {
+    width: 220px;
+  }
+  .other_partner {
+    position: static;
+    display: flex;
+    justify-content: center;
+  }
+}
+.team_list:nth-child(1) {
+  order: 1;
+}
+.team_list:nth-child(2) {
+  order: 3;
+}
+.team_list:nth-child(3) {
+  order: 2;
+}
+.team_list:nth-child(4) {
+  order: 4;
+}
