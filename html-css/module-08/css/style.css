@@ -27,9 +27,10 @@ html {
 .container {
   width: 320px;
   margin: 0 auto;
+  outline: none;
 }
 .baner_img {
-  background-image: url(../img/baner_tel.jpg);
+  background-image: url(../img/baner_desc.png);
   height: 540px;
   padding-top: 18px;
   margin: auto;
@@ -218,7 +219,7 @@ html {
     width: 748px;
   }
   .baner_img {
-    background-image: url(../img/baner_tabl.png);
+    background-image: url(../img/baner_desc.png);
     background-repeat: no-repeat;
     height: 700px;
     margin: 0 auto;
@@ -336,16 +337,16 @@ html {
     display: flex;
     justify-content: center;
   }
-}
-.team_list:nth-child(1) {
-  order: 1;
-}
-.team_list:nth-child(2) {
-  order: 3;
-}
-.team_list:nth-child(3) {
-  order: 2;
-}
-.team_list:nth-child(4) {
-  order: 4;
+  .team_list:nth-child(1) {
+    order: 1;
+  }
+  .team_list:nth-child(2) {
+    order: 3;
+  }
+  .team_list:nth-child(3) {
+    order: 2;
+  }
+  .team_list:nth-child(4) {
+    order: 4;
+  }
 }
