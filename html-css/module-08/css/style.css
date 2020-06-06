@@ -336,6 +336,7 @@ html {
     position: static;
     display: flex;
     justify-content: center;
+    align-items: center;
   }
   .team_list:nth-child(1) {
     order: 1;
