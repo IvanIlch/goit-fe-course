@@ -123,11 +123,12 @@ html {
 }
 .team {
   list-style: none;
+  margin-bottom: 30px;
 }
 .team_list {
   text-align: center;
   width: 234px;
-  /* margin-bottom: 20px; */
+  margin-bottom: 30px;
   position: relative;
 }
 .team_list::before {
@@ -171,7 +172,9 @@ html {
 .team_list:last-child {
   margin-bottom: 0;
 }
-
+.foto {
+  margin-bottom: 20px;
+}
 .name {
   font-family: "Montserrat";
   font-size: 14px;
@@ -195,9 +198,13 @@ html {
   border-color: rgb(255, 78, 80);
   background-color: white;
   border-radius: 20px;
+  margin-bottom: 70px;
 }
 /* MEDIA  */
 @media (max-width: 747px) {
+  .baner_img {
+    margin-bottom: 65px;
+  }
   .navig_list {
     margin-bottom: 113px;
   }
@@ -258,18 +265,9 @@ html {
   }
 }
 @media (min-width: 748px) and (max-width: 939px) {
-  .team {
-    flex-direction: column;
-    height: 525px;
-    align-content: center;
-    justify-content: start;
-    margin-top: 30px;
-  }
-  .team_list:nth-child(2n - 2) {
-    margin-bottom: 0;
-  }
-  .team_list:nth-child(-n + 2) {
-    margin-right: 20px;
+  .team_list::before {
+    right: 112px;
+    top: 86px;
   }
 }
 @media (min-width: 940px) {
@@ -278,10 +276,6 @@ html {
   }
   .meet_partner {
     margin-bottom: 20px;
-  }
-
-  .other_partner {
-    margin-bottom: 70px;
   }
 }
 /* MEDIA BOOTSTRAB  */
