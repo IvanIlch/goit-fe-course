@@ -100,19 +100,19 @@ a {
       from(rgba(252, 227, 138, 0.9)),
       to(rgba(243, 129, 129, 0.9))
     ),
-    url(../img/background.jpg);
+    url(../img/Background.jpg);
   background-image: -o-linear-gradient(
       bottom,
       rgba(252, 227, 138, 0.9),
       rgba(243, 129, 129, 0.9)
     ),
-    url(../img/background.jpg);
+    url(../img/Background.jpg);
   background-image: linear-gradient(
       0deg,
       rgba(252, 227, 138, 0.9),
       rgba(243, 129, 129, 0.9)
     ),
-    url(../img/background.jpg);
+    url(../img/Background.jpg);
   width: 100%;
   background-position: center;
   background-size: cover;
