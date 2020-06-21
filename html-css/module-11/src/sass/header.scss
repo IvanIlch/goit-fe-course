@@ -1,0 +1,111 @@
+.baner {
+  height: 1000px;
+  background-image: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      from(rgba(252, 227, 138, 0.9)),
+      to(rgba(243, 129, 129, 0.9))
+    ),
+    url(../images/Background.jpg);
+  background-image: -o-linear-gradient(
+      bottom,
+      rgba(252, 227, 138, 0.9),
+      rgba(243, 129, 129, 0.9)
+    ),
+    url(../images/Background.jpg);
+  background-image: linear-gradient(
+      0deg,
+      rgba(252, 227, 138, 0.9),
+      rgba(243, 129, 129, 0.9)
+    ),
+    url(../images/Background.jpg);
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+}
+.navigation {
+  @mixin flex(center);
+  padding-top: 25px;
+  margin-bottom: 158px;
+}
+.navigation-list {
+  @mixin flex;
+  width: 620px;
+}
+.navigation__logo {
+  text-decoration: none;
+  @include font("Montserrat", 30px, 1.2, #fff, 700);
+}
+.navigation-list__item-icon {
+  width: 18px;
+  height: 15px;
+  fill: $navigation-color;
+  &:hover {
+  fill: $navigation-color--hover;
+}
+}
+
+.navigation-list__item {
+  text-transform: uppercase;
+  @include font("Montserrat", 14px, 1.2, #fff);
+  -webkit-transition: -webkit-transform 0.5s linear;
+  transition: -webkit-transform 0.5s linear;
+  -o-transition: transform 0.5s linear;
+  transition: transform 0.5s linear;
+  transition: transform 0.5s linear, -webkit-transform 0.5s linear;
+  &:hover, :focus {
+  color: $navigation-color--hover;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  }
+  &::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: $navigation-color--hover;
+  position: relative;
+  top: 7px;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s linear;
+  -o-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+  }
+  &:hover::after {
+  opacity: 1;
+  }
+}
+
+.creative {
+  text-align: center;
+  @include font("Kaushan Script", 72px, 1.2, #fff);
+}
+.mogo {
+  margin-bottom: 110px;
+  text-align: center;
+  text-transform: uppercase;
+  @include font("Montserrat", 150px, 140px, #fff, 700);
+  letter-spacing: -5px;
+}
+.learn-more {
+  display: block;
+  margin: 0 auto 230px;
+  width: 160px;
+  height: 40px;
+  border: 3px solid white;
+  @include font("Montserrat", 14px, 1.2, #fff, 700);
+  -webkit-transition: -webkit-transform 0.5s linear;
+  transition: -webkit-transform 0.5s linear;
+  -o-transition: transform 0.5s linear;
+  transition: transform 0.5s linear;
+  transition: transform 0.5s linear, -webkit-transform 0.5s linear;
+  &:hover {
+  border-color: #fce38a;
+  color: #fce38a;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+}
+}

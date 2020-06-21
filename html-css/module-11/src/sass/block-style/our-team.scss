@@ -1,0 +1,174 @@
+.our-team-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  text-align: center;
+  width: 980px;
+  @include font("Roboto", 15px, 24px, $text-color);
+  margin-bottom: 90px;
+  padding-top: 10px;
+  letter-spacing: 0.1px;
+}
+.team {
+  @mixin flex;
+  margin-bottom: 144px;
+  position: relative;
+  &::after {
+  content: "";
+  display: block;
+  width: 1200px;
+  height: 1px;
+  position: absolute;
+  background-color: #e5e5e5;
+  bottom: -152px;
+  }
+}
+.team__list {
+  background-color: $footer-btn-color;
+  display: block;
+  width: 380px;
+  height: 470px;
+  position: relative;
+  &:hover .team__list__socials {
+  -webkit-transform: translate(-10px, -10px);
+  -ms-transform: translate(-10px, -10px);
+  transform: translate(-10px, -10px);
+  opacity: 1;
+  }
+  &:hover .team__list--gradient {
+  opacity: 0.8;
+  -webkit-transform: translate(-10px, -10px);
+  -ms-transform: translate(-10px, -10px);
+  transform: translate(-10px, -10px);
+  }
+}
+.team__list__socials {
+  width: 380px;
+  height: 470px;
+  position: absolute;
+  display: -webkit-box;
+  @mixin flex(center);
+  z-index: 2;
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.2s linear;
+  transition: -webkit-transform 0.2s linear;
+  -o-transition: transform 0.2s linear;
+  transition: transform 0.2s linear;
+  transition: transform 0.2s linear, -webkit-transform 0.2s linear;
+  -webkit-transition: opacity 0.2s linear;
+  -o-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+}
+.facebook__item-icon,
+.twitter__item-icon,
+.pinterest__item-icon,
+.instagram__item-icon {
+  width: 26px;
+  height: 26px;
+  fill: $social-icon-color--hover;
+  -webkit-transition: -webkit-transform 0.2s linear;
+  transition: -webkit-transform 0.2s linear;
+  -o-transition: transform 0.2s linear;
+  transition: transform 0.2s linear;
+  transition: transform 0.2s linear, -webkit-transform 0.2s linear;
+}
+.facebook:hover .facebook__item-icon {
+  fill: $navigation-color;
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+.twitter:hover .twitter__item-icon {
+  fill: $navigation-color;
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+.pinterest:hover .pinterest__item-icon {
+  fill: $navigation-color;
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+.instagram:hover .instagram__item-icon {
+  fill: $navigation-color;
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.facebook,
+.twitter,
+.pinterest,
+.instagram {
+  width: 56px;
+  height: 56px;
+  background-color: $social-icon-color;
+  -webkit-transition: -webkit-transform 0.2s linear;
+  transition: -webkit-transform 0.2s linear;
+  -o-transition: transform 0.2s linear;
+  transition: transform 0.2s linear;
+  transition: transform 0.2s linear, -webkit-transform 0.2s linear;
+  &:hover {
+  background-color: $social-icon-color--hover;
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+}
+.team__list--gradient {
+  position: absolute;
+  top: 0px;
+  display: block;
+  width: 380px;
+  height: 470px;
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    from(rgb(252, 227, 138)),
+    to(rgb(243, 129, 129))
+  );
+  background-image: -o-linear-gradient(
+    bottom,
+    rgb(252, 227, 138) 0%,
+    rgb(243, 129, 129) 100%
+  );
+  background-image: linear-gradient(
+    0deg,
+    rgb(252, 227, 138) 0%,
+    rgb(243, 129, 129) 100%
+  );
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.2s linear;
+  transition: -webkit-transform 0.2s linear;
+  -o-transition: transform 0.2s linear;
+  transition: transform 0.2s linear;
+  transition: transform 0.2s linear, -webkit-transform 0.2s linear;
+}
+.team__list-foto {
+  position: relative;
+  -webkit-transition: -webkit-transform 0.2s linear;
+  transition: -webkit-transform 0.2s linear;
+  -o-transition: transform 0.2s linear;
+  transition: transform 0.2s linear;
+  transition: transform 0.2s linear, -webkit-transform 0.2s linear;
+}
+.team__list:hover .team__list-foto {
+  -webkit-transform: translate(-10px, -10px);
+  -ms-transform: translate(-10px, -10px);
+  transform: translate(-10px, -10px);
+}
+.team__list-name {
+  @include font("Montserrat", 14px, 1.2, $main-color);
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 27px;
+}
+.team__list-proff {
+  @include font("Roboto", 15px, 24px, $text-color, 300, italic);
+  text-align: center;
+  padding-top: 8px;
+  
+}

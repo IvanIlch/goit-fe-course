@@ -1,0 +1,99 @@
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* SERVISE  */
+.servise {
+  margin-bottom: 42px;
+}
+.subtitle {
+  text-align: center;
+  @include font("Kaushan Script", 24px, 1.2, $main-color);
+  padding-top: 44px;
+  margin-bottom: 13px;
+}
+.title {
+  @include font("Montserrat", 30px, 1.2, $main-color, 700);
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 66px;
+  &::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: $social-icon-color--hover;
+  position: relative;
+  margin: auto;
+  top: 35px;
+  }
+}
+.servise-list {
+  @mixin flex;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  width: 1100px;
+  margin-left: 90px;
+}
+.servise-list__item {
+  width: 300px;
+}
+.servise-list__item-name {
+  text-transform: uppercase;
+  @include font("Montserrat", 14px, 1.2, $main-color);
+  margin-bottom: 10px;
+}
+.servise-list__item-about {
+  @include font("Roboto", 15px, 24px, $text-color);
+}
+
+.servise-list__item:nth-last-child(n + 4) {
+  margin-bottom: 64px;
+}
+
+.servise-list__item--alarm::before,
+.servise-list__item--line-graph::before,
+.servise-list__item--computer::before,
+.servise-list__item--book::before,
+.servise-list__item--home::before,
+.servise-list__item--image::before {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 32px;
+  position: relative;
+  left: -60px;
+  top: 35px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.servise-list__item--alarm::before {
+  background-image: url(../images/service-icon//alarm.svg);
+}
+.servise-list__item--line-graph::before {
+  background-image: url(../images/service-icon/line-graph.svg);
+}
+.servise-list__item--computer::before {
+  background-image: url(../images/service-icon/computer.svg);
+}
+.servise-list__item--book::before {
+  background-image: url(../images/service-icon/book.svg);
+}
+.servise-list__item--home::before {
+  background-image: url(../images/service-icon/home.svg);
+}
+.servise-list__item--image::before {
+  background-image: url(../images/service-icon/image.svg);
+}

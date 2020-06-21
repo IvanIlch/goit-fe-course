@@ -1,0 +1,36 @@
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 80px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.footer__info {
+  display: inline-block;
+}
+.footer__info--color {
+  color: #f38181;
+}
+.input {
+  @include font("Roboto", 15px, 24px, $text-color, 300, italic);
+  border: 1px solid #e7e7e7;
+  width: 230px;
+  height: 40px;
+}
+.button {
+  @include font("Montserrat", 14px, 17px, $navigation-color, 700);
+  background-color: $footer-btn-color;
+  width: 150px;
+  height: 40px;
+  text-transform: uppercase;
+}
+.subscribe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
