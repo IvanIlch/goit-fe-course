@@ -11,7 +11,7 @@
   letter-spacing: 0.1px;
 }
 .team {
-  @mixin flex;
+  @extend %flex;
   margin-bottom: 144px;
   position: relative;
   &::after {
@@ -48,7 +48,8 @@
   height: 470px;
   position: absolute;
   display: -webkit-box;
-  @mixin flex(center);
+  @extend %flex;
+  align-content: center;
   z-index: 2;
   opacity: 0;
   -webkit-transition: -webkit-transform 0.2s linear;

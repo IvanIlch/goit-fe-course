@@ -1,10 +1,5 @@
 .footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  @extend %flex;
   height: 80px;
   -webkit-box-align: center;
   -ms-flex-align: center;

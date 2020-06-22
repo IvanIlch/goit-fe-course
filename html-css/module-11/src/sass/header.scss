@@ -25,12 +25,12 @@
   background-size: cover;
 }
 .navigation {
-  @mixin flex(center);
+  @extend %flex;
   padding-top: 25px;
   margin-bottom: 158px;
 }
 .navigation-list {
-  @mixin flex;
+  @extend %flex;
   width: 620px;
 }
 .navigation__logo {
