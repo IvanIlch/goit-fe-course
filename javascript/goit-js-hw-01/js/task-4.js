@@ -6,14 +6,13 @@ let balance;
 
 do {
   amountPerDroid = prompt(`Введіть кількість дроідів`);
-  Number.amountPerDroid;
   if (amountPerDroid === null) {
     console.log(`Скасовано користувачем!`);
     break;
-  } else if (credits < amountPerDroid * pricePerDroid) {
+  } else if (credits < Number(amountPerDroid) * pricePerDroid) {
     console.log(`Недостатньо коштів на рахунку!`);
     break;
-  } else if (credits >= amountPerDroid * pricePerDroid) {
+  } else if (Number(amountPerDroid) * pricePerDroid) {
     totalPrice = amountPerDroid * pricePerDroid;
     balance = credits - totalPrice;
 
