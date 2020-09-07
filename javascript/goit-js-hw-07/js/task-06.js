@@ -1,5 +1,7 @@
 const inputRef = document.querySelector("#validation-input");
-inputRef.addEventListener("focus", () => {});
+inputRef.addEventListener("focus", (event) => {
+  event.target.classList.remove("valid", "invalid");
+});
 inputRef.addEventListener("blur", blured);
 
 function blured(event) {
