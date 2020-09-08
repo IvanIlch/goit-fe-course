@@ -17,3 +17,9 @@
 #validation-input.invalid {
   border-color: #f44336;
 }
+#boxes {
+  display: flex;
+}
+#boxes div {
+  margin: 2px;
+}
