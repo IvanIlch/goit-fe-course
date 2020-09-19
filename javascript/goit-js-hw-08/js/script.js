@@ -1,9 +1,15 @@
 import items from "./gallery-items.js";
+
 // Task 1
 
 const listRef = document.querySelector(".js-gallery");
+const lightboxRef = document.querySelector(".lightbox");
+const modalImgRef = document.querySelector(".lightbox__image");
+const btnRef = document.querySelector(".lightbox__button");
+const overlayRef = document.querySelector(".lightbox__content");
 
-const createOneElem = (item) => {
+const createOneElem = (item, i) => {
+  let index = 0;
   const listItemRef = document.createElement("li");
   listItemRef.classList.add("gallery__item");
 
@@ -17,19 +23,15 @@ const createOneElem = (item) => {
   listItemAImgRef.classList.add("gallery__image");
   listItemAImgRef.src = item.preview;
   listItemAImgRef.setAttribute("data-source", item.original);
+  listItemAImgRef.setAttribute("data-index", index + i);
   listItemAImgRef.alt = item.description;
   listItemARef.appendChild(listItemAImgRef);
-
   return listItemRef;
 };
-const createDom = items.map((item) => createOneElem(item));
-
+const createDom = items.map((item, i) => createOneElem(item, i));
 listRef.append(...createDom);
+
 // Task 2
-const lightboxRef = document.querySelector(".lightbox");
-const modalImgRef = document.querySelector(".lightbox__image");
-const btnRef = document.querySelector(".lightbox__button");
-const overlayRef = document.querySelector(".lightbox__content");
 
 btnRef.addEventListener("click", removeClass);
 overlayRef.addEventListener("click", closeOverlay);
@@ -43,6 +45,23 @@ listRef.addEventListener("click", (event) => {
   }
   modalImgRef.src = target.dataset.source;
   lightboxRef.classList.add("is-open");
+
+  let index = Number(event.target.dataset.index);
+  window.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft") {
+      if (index !== 0) {
+        modalImgRef.src = items[index - 1].original;
+        return (index -= 1);
+      }
+      return;
+    } else if (event.key === "ArrowRight") {
+      if (index < items.length - 1) {
+        modalImgRef.src = items[index + 1].original;
+        return (index += 1);
+      }
+      return;
+    }
+  });
 });
 
 function removeClass() {
@@ -55,3 +74,8 @@ function closeOverlay(event) {
   }
   return;
 }
+window.addEventListener("keydown", (event) => {
+  if (event.code === "Escape") {
+    removeClass();
+  }
+});
