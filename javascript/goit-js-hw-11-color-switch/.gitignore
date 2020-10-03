@@ -1,5 +1,4 @@
 # production
-/src
 
 # Logs
 logs
@@ -29,14 +28,6 @@ coverage
 # Bower dependency directory (https://bower.io/)
 bower_components
 
-# node-waf configuration
-.lock-wscript
-
-# Compiled binary addons (http://nodejs.org/api/addons.html)
-build/Release
-
-# Dependency directories
-node_modules/
 jspm_packages/
 
 # Typescript v1 declaration files
